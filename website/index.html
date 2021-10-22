@@ -13,8 +13,16 @@
       <!--Navbar-->
       <nav id="navbar" class="navbar">
         <div id="navbar-container" class="navbar-container">
-        <div class="hamburger-menu">
-          <i class="fas fa-bars"></i>
+        <div class="dropdown">
+          <div id="menu" class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+
+          <div id="dropdown-content" class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
         </div>
 
         <div class="brand">
@@ -49,64 +57,9 @@
         <button class="btn">Login</button>
       </nav>
 
+      <!--Main section-->
       <section class="content">
-        <div>
-          <p>asfsdafsdfadf</p>
-        </div>
 
-        <div>
-          <p>asfsdafsdfadf</p>
-        </div>
-
-        <div>
-          <p>asfsdafsdfadf</p>
-        </div>
-
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
-        <div>
-          <h1>flkasfklasdjklfasklf</h1>
-        </div>
       </section>
     </div>
 
@@ -115,22 +68,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      var navbar = document.getElementById("navbar");
-      var sticky = document.getElementById("navbar-container").offsetTop;
-
-      function myFunction() {
-
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
-      }
-    </script>
+    <script src="./navbar.js"></script>
+    <script src="./dropdown.js"></script>
   </body>
 </html>
