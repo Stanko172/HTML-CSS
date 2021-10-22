@@ -85,7 +85,6 @@ body {
 .hamburger-menu {
   cursor: pointer;
   font-size: 32px;
-  display: none;
 }
 
 .brand i {
@@ -112,6 +111,7 @@ body {
 
 /*Navbar dropdown (medium and small screens)*/
 .dropdown {
+  display: none;
   position: relative;
 }
 
@@ -148,10 +148,56 @@ body {
   background-color: #062489;
 }
 
+/*Landing*/
+.landing {
+  padding-top: 5em;
+  display: flex;
+}
+
+.landing .hero-section img {
+  width: 100%;
+}
+
+.landing .text-section {
+  display: flex;
+  flex: 10;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing .hero-section {
+  flex: 9;
+}
+
+.landing .text-section .about {
+  padding: 1em;
+}
+
+.landing .text-section .about h1 {
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+.landing .text-section .about h4 {
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+.landing .text-section .actions {
+  display: flex;
+  padding: 0px 1.5em;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+.landing .text-section .actions .btn:nth-child(2) {
+  margin-left: 0.5em;
+}
+
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 1000px) {
   /*Navbar -> hamburger menu*/
-  .hamburger-menu {
+  .dropdown {
     display: block;
   }
 
@@ -159,9 +205,42 @@ body {
     display: none;
   }
 
+  @media only screen and (max-width: 900px) {
+    .landing {
+      flex-direction: column;
+    }
+
+    .landing .hero-section {
+      text-align: center;
+      margin-top: 5em;
+    }
+
+    .landing .hero-section img {
+      width: 80%;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     .navbar button {
       display: none;
+    }
+
+    .landing .text-section .about h1 {
+      font-size: 1.8em;
+    }
+
+    .landing .text-section .about h4 {
+      font-size: 0.8em;
+    }
+
+    @media only screen and (max-width: 400px) {
+      .landing .text-section .about h1 {
+        font-size: 1.8em;
+      }
+
+      .landing .text-section .about h4 {
+        font-size: 0.8em;
+      }
     }
   }
 }
