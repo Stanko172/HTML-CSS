@@ -59,6 +59,7 @@
 
       <!--Main section-->
       <section class="container content">
+        <!--Landing-->
         <div class="landing">
           <div class="text-section">
             <div class="about">
@@ -75,6 +76,43 @@
             <img src="./images/landing.png" alt="">
           </div>
         </div>
+
+        <!--Companies carousel-->
+        <div class="carousel-container">
+          <div id="carousel" class="carousel">
+            <div class="carousel-item">
+              <h1>Company 1</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 2</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 3</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 4</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 5</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 6</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 7</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 8</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 9</h1>
+            </div>
+            <div class="carousel-item">
+              <h1>Company 10</h1>
+            </div>
+          </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </section>
     </div>
 
@@ -85,5 +123,25 @@
 
     <script src="./navbar.js"></script>
     <script src="./dropdown.js"></script>
+    <script>
+      let carousel = document.getElementById("carousel");
+      let carouselItems = [...carousel.children];
+
+      const interval = setInterval(() => {
+        const item = carouselItems.shift();
+
+        item.style.opacity = "0";
+        () => {
+          setTimeout(() => {
+            carousel.removeChild(item);
+          });
+        }
+
+        item.style.opacity = "1";
+        carousel.appendChild(item);
+
+        carouselItems.push(item);
+      }, 4000);
+    </script>
   </body>
 </html>
