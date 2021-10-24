@@ -78,6 +78,7 @@
         </div>
 
         <!--Companies carousel-->
+        <h2 class="header">We are featured in</h2>
         <div class="carousel-container">
           <div id="carousel" class="carousel">
             <div class="carousel-item">
@@ -128,20 +129,19 @@
       let carouselItems = [...carousel.children];
 
       const interval = setInterval(() => {
-        const item = carouselItems.shift();
+        let item = carousel.children[0];
 
-        item.style.opacity = "0";
-        () => {
-          setTimeout(() => {
-            carousel.removeChild(item);
-          });
-        }
+        item.style.opacity = 0;
+        setTimeout(function() {
+          carousel.removeChild(item);
+        }, 1000);
 
-        item.style.opacity = "1";
-        carousel.appendChild(item);
+        setTimeout(function() {
+          item.style.opacity = 1;
+          carousel.appendChild(item);
+        }, 2000);
 
-        carouselItems.push(item);
-      }, 4000);
+      }, 3000);
     </script>
   </body>
 </html>

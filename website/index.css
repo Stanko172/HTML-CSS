@@ -197,6 +197,11 @@ body {
 }
 
 /*Carousel*/
+.header {
+  text-align: center;
+  margin-top: 5em;
+}
+
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -206,11 +211,13 @@ body {
   display: flex;
   overflow: hidden;
   max-width: 1200px;
-  margin-top: 5em;
+  margin-top: 2.5em;
 }
 
 .carousel-item {
+  opacity: 1;
   min-width: 200px;
+  transition: opacity 1s linear;
 }
 
 /*MEDIA QUERIES*/
