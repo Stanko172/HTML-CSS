@@ -45,6 +45,12 @@ body {
   background: -webkit-linear-gradient(right, #fe988b9f, #fa768d9f, #f78ca09f);
 }
 
+.header {
+  font-size: 34px;
+  margin: 3em 0 2em 0;
+  text-align: center;
+}
+
 /*Navbar*/
 .navbar {
   display: flex;
@@ -197,11 +203,6 @@ body {
 }
 
 /*Carousel*/
-.header {
-  text-align: center;
-  margin-top: 5em;
-}
-
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -218,6 +219,34 @@ body {
   opacity: 1;
   min-width: 200px;
   transition: opacity 1s linear;
+}
+
+/*About*/
+.about-section {
+  display: flex;
+}
+
+.about-section-image img {
+  width: 100%;
+}
+
+.about-section-image {
+  flex: 1;
+}
+
+.about-section-text {
+  padding: 1.2em;
+  flex: 1;
+}
+
+.about-section-text h1 {
+  font-size: 24px;
+  margin-bottom: 1.2em;
+}
+
+.about-section-text p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 /*MEDIA QUERIES*/
@@ -243,6 +272,18 @@ body {
 
     .landing .hero-section img {
       width: 80%;
+    }
+
+    .about-section {
+      flex-direction: column;
+    }
+
+    .about-section-text {
+      order: 1;
+    }
+
+    .about-section-image {
+      order: 2;
     }
   }
 

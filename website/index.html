@@ -78,7 +78,7 @@
         </div>
 
         <!--Companies carousel-->
-        <h2 class="header">We are featured in</h2>
+        <h1 class="header">We are featured in</h1>
         <div class="carousel-container">
           <div id="carousel" class="carousel">
             <div class="carousel-item">
@@ -113,6 +113,19 @@
             </div>
           </div>
         </div>
+
+        <!--About-->
+        <h1 class="header">About</h1>
+        <div class="about-section">
+          <div class="about-section-image">
+            <img src="images/about.svg" alt="">
+          </div>
+          <div class="about-section-text">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores harum nam molestiae ratione dignissimos qui deleniti libero, quaerat impedit voluptas porro dolorem minus voluptatibus recusandae possimus dolorum veniam similique corporis pariatur ex voluptates rerum. Repudiandae atque odio odit obcaecati ab.</p>
+          </div>
+        </div>
+
         <br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </section>
     </div>
@@ -124,24 +137,7 @@
 
     <script src="./navbar.js"></script>
     <script src="./dropdown.js"></script>
-    <script>
-      let carousel = document.getElementById("carousel");
-      let carouselItems = [...carousel.children];
-
-      const interval = setInterval(() => {
-        let item = carousel.children[0];
-
-        item.style.opacity = 0;
-        setTimeout(function() {
-          carousel.removeChild(item);
-        }, 1000);
-
-        setTimeout(function() {
-          item.style.opacity = 1;
-          carousel.appendChild(item);
-        }, 2000);
-
-      }, 3000);
-    </script>
+    <script src="./carousel.js"></script>
+    
   </body>
 </html>
